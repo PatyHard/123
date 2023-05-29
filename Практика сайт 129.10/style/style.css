@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  border:0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(187, 240, 64, 0.877);
+  background-color: rgba(58, 120, 212, 0.445);
+  background-repeat: no-repeat;
+}
+
+
+header, main, footer{
+  width: 1240px;
+  margin: auto;
+}
+
+
+iframe {
+  width: 600px; 
+  height: 450px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 100px;
+  z-index: 10;
+}
+
+.logo1 {
+  margin-left: 250px;
+}
+
+.logo a {
+  font-size: 34px;
+  font-weight: bold;
+  
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: -25px;
+  z-index: 999;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: rgba(235, 137, 137, 0.801);
+}
+
+nav ul li:hover > a {
+  background-color: rgb(224, 196, 196);
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+nav ul ul li {
+  width: 96px;
+}
+
+nav ul ul a {
+  background-color: rgb(128, 6, 6);
+}
+
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+
+nav li {
+  margin-left: 25px;
+}
+
+nav a:hover {
+  color: #000000b2;
+}
+
+main{
+  padding-top: 100px;
+}
+
+
+
+
+.content{
+	width: 1240px;
+	height: 1300px;
+	display: flex;
+	background-color: rgba(199, 197, 197, 0.829);
+}
+
+.block-left{
+	width:50%;
+	height:1300px;
+  background-color: rgba(199, 197, 197, 0.829);
+}
+
+.block-right{
+	width:50%;
+	height:1300px;
+	padding-right: 10px;
+  background-color: rgba(199, 197, 197, 0.829);
+}
+
+.text {
+  padding: 5px;
+}
+
+.text1 {
+  padding: 5px;
+  color: #333;
+  text-align: justify;
+  text-indent: 25px;
+}
+
+.text2 {
+  padding: 5px;
+  color: #333;
+  text-align: center;
+}
+.map {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.photo{
+	padding-top:10px;
+	max-width: 100%;
+}
+
+.photo2{
+	padding-top:10px;
+	max-width: 100%;
+	margin-left: 185px;
+}
+
+.photo3{
+	padding-top:10px;
+	max-width: 100%;
+	margin-left: 70px;
+}
+
+
+
+
+
+
+.main-section {
+  background-image: url('../image/фон.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-left {
+  width: 620px;
+  margin-top: 10px;
+}
+
+.main-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.buttn:hover {
+  background-color: #666;
+}
+
+.product-section {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  background-color: rgb(83, 82, 80);
+}
+
+.product-section h2 {
+  flex: 100%;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.product {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.product img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.product h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  justify-content: space-between;
+  text-align: end;
+}
+
+
+.slider-container {
+  max-width: 1348;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  animation: slide 10s infinite;
+  padding: 5px;
+  z-index: 2;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slide {
+  0%, 20% {
+    transform: translateX(0%);
+  }
+  25%, 45% {
+    transform: translateX(-100%);
+  }
+  50%, 70% {
+    transform: translateX(-200%);
+  }
+}
