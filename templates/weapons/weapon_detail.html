@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Магазин оружия</title>
-    {% load static %}
-     <link rel="stylesheet" href="{% static 'index/style.css' %}">
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="#">Магазин оружия</a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">Главная</a></li>
-          <li>
-            <a href="#">Категории</a>
-            <ul>
-              <li><a href="#">Огнестрельное оружие</a></li>
-              <li><a href="#">Холодное оружие</a></li>
-              <li><a href="#">Охотничье оружие</a></li>
-              <li><a href="#">Другое</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Контакты</a></li>
-          <li>
-            <a href="#">Услуги</a>
-            <ul>
-              <li><a href="#">Покупка</a></li>
-              <li><a href="#">Продажа</a></li>
-              <li><a href="#">Аренда</a></li>
-              <li><a href="#">Ремонт</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="hero-section">
-        <h1>Лучшее оружие только у нас!</h1>
-        <a href="#" class="btn">Узнать больше</a>
-      </section>
-      <div class="product-section">
-{% block content %}
-		  <div class="product">
-		     <img src="{{ weapon.image.url}}" alt="connect">
-		  <p><a href="{% url 'weapons:weapon_info' weapon.id  %}">
-                                     название: {{ weapon.title }}</a></p>
-			  <p class="description">Описание: {{ weapon.description }}</p>
-		    <p class="price">${{ weapon.price }}</p>
-		    <a href="#" class="btn">Купить</a>
-		  </div>
-{% endblock %}
-	      <footer>
-      <p>Магазин оружия &copy; 2022</p>
-	  <p>Сайт создан Енгулатовым Ренатом</p>
-    </footer>
-      </div>
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин оружия</title>
+  {% load static %}
+   <link rel="stylesheet" href="{% static 'index/style.css' %}">
+<!--  <link rel="shortcut icon" href="../image/лого.jpg" type="image/x-icon" />-->
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="../index.html">Магазин оружия</a>
+      <img class="logo1" src="{% static 'images/logo.jpg' %}" alt="connect">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'weapons:index' %}">Главная</a></li>
+        <li>
+          <a href="">Категории</a>
+          <ul>
+            <li><a href="">Огнестр. оружие</a></li>
+            <li><a href="">Холодное оружие</a></li>
+            <li><a href="">Охотничье оружие</a></li>
+            <li><a href="">Другое</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Услуги</a>
+          <ul>
+            <li><a href="">Покупка</a></li>
+            <li><a href="">Продажа</a></li>
+            <li><a href="">Аренда</a></li>
+            <li><a href="">Ремонт</a></li>
+          </ul>
+        </li>
+        <li><a href="{% url 'weapons:contact' %}">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+          <div class="content">
+            <div class="block-left">
+              <h1 class="text2"> {{ weapon.title }} </h1>
+                  <img  class="photo" src="{{ weapon.image.url}}" alt="connect">
+                   <div class="text2">
+                     <h1>Описание</h1></div>
+                   <div class="text1">
+                  <p>{{ weapon.description }}</p>
+                 </div>
+            </div>
+            <div class="block-right">
+            </div>
+          </div>
+    {% endblock %}
+  </main>
+  <footer>
+    <p>Магазин оружия &copy; 2023 Все права пользователей защищены</p>
+  </footer>
+</body>
+
 </html>

@@ -1,12 +1,13 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
-from .views import AllWeaponsView, WeaponDetailView
+from .views import AllWeaponsView, WeaponDetailView, Contact
 
 app_name = 'weapons'
 
 urlpatterns = [
     path('', AllWeaponsView.as_view(), name='index'),
+    path('contact/', Contact.as_view(), name='contact'),
     path('weapon/<int:pk>/', WeaponDetailView.as_view(), name='weapon_info'),
 ]
 if settings.DEBUG:

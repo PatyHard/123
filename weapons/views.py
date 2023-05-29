@@ -1,4 +1,5 @@
-from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView, \
+    TemplateView
 from .models import Weapon
 
 
@@ -13,3 +14,7 @@ class WeaponDetailView(DetailView):
     """Предстовление вывода оружия по id"""
     model = Weapon
     template_name = 'weapons/weapon_detail.html'
+
+
+class Contact(TemplateView):
+    template_name = 'contact.html'
