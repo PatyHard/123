@@ -10,7 +10,6 @@ class Weapon(models.Model):
                                         verbose_name="Длина ствола")
     weight = models.IntegerField(default=2000, null=False, blank=False, verbose_name="Вес")
     price = models.IntegerField(default=2000, null=False, blank=False, verbose_name="Цена")
-    # brand = models.ForeignKey()
 
     CHOICES = (
         ('FR', 'Огнестрельное'),

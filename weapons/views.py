@@ -1,5 +1,5 @@
-from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView, \
-    TemplateView
+from django.shortcuts import render
+from django.views.generic import ListView, DetailView, TemplateView
 from .models import Weapon
 
 
@@ -18,3 +18,7 @@ class WeaponDetailView(DetailView):
 
 class Contact(TemplateView):
     template_name = 'contact.html'
+
+
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)
